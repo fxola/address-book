@@ -1,0 +1,61 @@
+body{
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgb(220, 214, 214);
+}
+
+h1{
+padding: 10px;
+}
+
+input{
+    padding: 3px;
+    margin : 10px;
+    width: 70%;
+    border: none;
+    border-left: 1px solid blueviolet;
+    outline: none;
+    background: transparent;
+    /* border-bottom: 0.1px solid grey; */
+}
+section#form-content{
+    padding: 1em;
+    background-color: #f2f4f5;
+    text-align: left;    
+    text-justify: inter-cluster;
+    width: 40%;
+}
+section#form-output{
+    margin-left: 10px;
+    background-color: black;
+    width :60%;
+    color: white;
+    text-align: left;    
+    padding: 10px;    
+}
+section#main{
+    display: flex;
+}
+.editbody{
+    background-color: rgb(220, 214, 255);
+}
+
+:any-link{
+    text-decoration: none;
+    color: white;
+}
+
+button{
+    background: transparent;
+    border: 1px solid grey;
+    padding: 7px 14px 7px 14px;
+    margin-top:0.7em;
+    margin-left: 0.5em;
+    border-radius: 3px;
+}
+button:hover{
+    color: white;
+    background: grey;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: 0.3s ease-in;
+}

@@ -27,9 +27,9 @@ section#form-content{
 }
 section#form-output{
     margin-left: 10px;
-    background-color: black;
+    background-color: #f2f4f5;
     width :60%;
-    color: white;
+    color: black;
     text-align: left;    
     padding: 10px;    
 }
@@ -42,7 +42,7 @@ section#main{
 
 :any-link{
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 button{
@@ -52,10 +52,11 @@ button{
     margin-top:0.7em;
     margin-left: 0.5em;
     border-radius: 3px;
+    outline:none;
 }
 button:hover{
     color: white;
     background: grey;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    transition: 0.3s ease-in;
+    transition: 0.3s ease;  
+    outline:none;    
 }

@@ -6,13 +6,13 @@ var picture = document.getElementById('image');
 var output = document.getElementById('form-output');
 var listOfNames = '';
 var addressBook = [];
-var deleteUser = document.querySelectorAll('[data-id]');
+var parent = document.getElementById('list-output');
+// var deleteUser = document.getElementById('delete');
 
 
 
 submitButton.addEventListener('click',function(e){
     e.preventDefault();
-    console.log(deleteUser);
   
     var contact = {
         name: contactName.value, 
@@ -24,17 +24,20 @@ submitButton.addEventListener('click',function(e){
     addressBook.push(contact);  
 
     addressBook.forEach(function(element, index, array){
-        listOfNames = "<ul><li><a href='editbook.html'>" + element.name +" is at index " + index + "   <button data-id = "+index+"><span>DELETE</span></button></a></li></ul>";
+        listOfNames = "<li><a href='editbook.html'>" + element.name + "  </a> <button id='deletee' data-id = "+index+">DELETE</button></li>";
     });
-  output.innerHTML += listOfNames;
+  parent.innerHTML += listOfNames;
 
-  function deleteContact(){
 
-  }
+});
 
+parent.addEventListener('click',function(e){
+    if(e.target.classList.contains(deletee)){
+        console.log('hey');
+    };
+},false);
 
     function clear(){
         contactName.value ='';
     }
     clear();
-});

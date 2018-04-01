@@ -20,24 +20,27 @@ submitButton.addEventListener('click',function(e){
         phoneNumber : phone.value,
         displayPicture : picture.value
     }
-    
-    addressBook.push(contact);  
+
+    addressBook.push(contact);    
+    sessionStorage.setItem('contact', JSON.stringify(addressBook));
 
     addressBook.forEach(function(element, index, array){
-        listOfNames = "<li><a href='editbook.html'>" + element.name + "  </a> <button id='deletee' data-id = "+index+">DELETE</button></li>";
+        listOfNames = "<li><a href='editbook.html'>" + element.name + "  </a> <button class='deleteContact' data-id = "+index+">DELETE</button></li>";
     });
-  parent.innerHTML += listOfNames;
+    
+    parent.innerHTML += listOfNames;
 
+  function clear(){
+    contactName.value ='';
+}
+clear();
 
 });
 
-parent.addEventListener('click',function(e){
-    if(e.target.classList.contains(deletee)){
-        console.log('hey');
-    };
-},false);
+parent.addEventListener('click', function(e){
+    if(e.target.classList.contains('deleteContact')){
+        console.log('hey');}
+    // console.log('hey');
+});
 
-    function clear(){
-        contactName.value ='';
-    }
-    clear();
+  

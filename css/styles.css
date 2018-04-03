@@ -2,10 +2,12 @@ body{
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: rgb(220, 214, 214);
+    
 }
 
 h1{
 padding: 10px;
+font-size: 3em;
 }
 
 input{
@@ -13,7 +15,7 @@ input{
     margin : 10px;
     width: 70%;
     border: none;
-    border-left: 1px solid blueviolet;
+    border-left: 1px solid rgb(158, 156, 160);
     outline: none;
     background: transparent;
     /* border-bottom: 0.1px solid grey; */
@@ -24,6 +26,10 @@ section#form-content{
     text-align: left;    
     text-justify: inter-cluster;
     width: 40%;
+    box-shadow: 3px 15px 30px 1px rgb(148, 147, 147);
+    border-radius: 4px;
+    font-weight: 100;
+    
 }
 section#form-output{
     margin-left: 10px;
@@ -32,6 +38,9 @@ section#form-output{
     color: black;
     text-align: left;    
     padding: 10px;    
+    box-shadow: 3px 15px 30px 1px rgb(148, 147, 147);
+    border-radius: 4px;
+    
 }
 section#main{
     display: flex;
@@ -53,10 +62,33 @@ button{
     margin-left: 0.5em;
     border-radius: 3px;
     outline:none;
+    font-weight: 100;
 }
 button:hover{
     color: white;
     background: grey;
     transition: 0.3s ease;  
     outline:none;    
+}
+li{
+    text-decoration: none;
+    list-style: none;
+}
+.contact-name{
+    color: black;
+    padding: .8em 3em .8em 3em;
+    border: 5px, solid, grey;
+    margin-bottom: 1em;
+    box-shadow: 3px 15px 30px 1px rgb(148, 147, 147);
+    border-radius: 5px;
+}
+.deleteContact{
+    color: red;
+    border: 1px solid red;
+    text-align: right;
+}
+.deleteContact:hover{
+    color:white;
+    background: red;
+    transition: 0.3s ease;  
 }

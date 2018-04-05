@@ -2,14 +2,26 @@ body{
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: rgb(220, 214, 214);
+    background: url("../images/rick.jpg");
     
 }
 
-h1{
+h1 > span{
 padding: 10px;
-font-size: 3em;
+font-size: 2em;
+color: black;
+/* background-color:#f2f4f5; */
+font-family: 'Courier New', Courier, monospace;
+letter-spacing: 5px;
+word-spacing: 1em;
+background-color: rgba(211, 211, 211, 0.7);
+/* opacity: 0.5; */
+/* box-shadow: 3px 15px 30px 1px black; */
+border-radius: 5px;
 }
-
+label{
+    font-size:1.5em;    
+}
 input{
     padding: 3px;
     margin : 10px;
@@ -18,19 +30,36 @@ input{
     border-left: 1px solid rgb(158, 156, 160);
     outline: none;
     background: transparent;
+    font-size:1.2em;
+    /* box-shadow: 1px 3px 15px 1px black; */
+    
     /* border-bottom: 0.1px solid grey; */
 }
 section#form-content{
     padding: 1em;
-    background-color: #f2f4f5;
+    /* background-color: #f2f4f5; */
+    background: linear-gradient(270deg, rgb(65, 37, 245) 0%, rgb(105, 178, 255) 100%);
     text-align: left;    
     text-justify: inter-cluster;
     width: 40%;
-    box-shadow: 3px 15px 30px 1px rgb(148, 147, 147);
+    box-shadow: 3px 15px 30px 1px ;
     border-radius: 4px;
     font-weight: 100;
     
 }
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: rgb(101, 113, 126);
+
+}
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: rgb(105, 178, 255);
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: rgb(105, 178, 255);
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: rgb(105, 178, 255);
+  }
 section#form-output{
     margin-left: 10px;
     background-color: #f2f4f5;
@@ -38,7 +67,7 @@ section#form-output{
     color: black;
     text-align: left;    
     padding: 10px;    
-    box-shadow: 3px 15px 30px 1px rgb(148, 147, 147);
+    box-shadow: 3px 15px 30px 1px black;
     border-radius: 4px;
     
 }
@@ -56,24 +85,32 @@ section#main{
 
 button{
     background: transparent;
-    border: 1px solid grey;
-    padding: 7px 14px 7px 14px;
+    border: 1px solid rgb(11, 255, 11);
+    padding: 10px 2em 10px 2em;
     margin-top:0.7em;
     margin-left: 0.5em;
     border-radius: 3px;
     outline:none;
     font-weight: 100;
+    letter-spacing: 2px;
+    color: black;
+    
 }
 button:hover{
     color: white;
-    background: grey;
+    background: rgb(11, 255, 11);
     transition: 0.3s ease;  
-    outline:none;    
+    outline:none; 
+    cursor: pointer;   
+    /* border: none; */
 }
 li{
     text-decoration: none;
     list-style: none;
+    font-size:1.2em;    
 }
+
+
 .contact-name{
     color: black;
     padding: .8em 3em .8em 3em;

@@ -24,7 +24,7 @@ submitButton.addEventListener('click',function(e){
 
     var contactDetails = JSON.parse(sessionStorage.contact);
     contactDetails.forEach(function(element, index, array){
-        listOfNames = "<li class ='contact-name'><a href='editbook.html?name="+element.name+"'>" + element.name + "  </a> <button class='deleteContact' data-id = "+index+">DELETE</button></li>";
+        listOfNames = "<li class ='contact-name'><span class ='listname'><a href='editbook.html?name="+element.name+"'>" + element.name + "  </a></span> <span class='listbutton'><button class='deleteContact' data-id = "+index+">DELETE</button></span></li>";
     });
 
     parent.innerHTML += listOfNames;
@@ -41,10 +41,10 @@ parent.addEventListener('click', function(e){
         parent.innerHTML = "";
         
         var contactID = e.target.getAttribute('data-id');
-        var contactDetails = JSON.parse(sessionStorage.contact);
-       var contactLeft = contactDetails.splice(contactID,1);
+        var contactDetailss = JSON.parse(sessionStorage.contact);
+       var contactLeft = contactDetailss.splice(contactID,1);
        contactLeft.forEach(function(element, index, array){
-            listOfNames = "<li><a href='editbook.html'>" + element.name + "  </a> <button class='deleteContact' data-id = "+index+">DELETE</button></li>";
+        listOfNames = "<li class ='contact-name'><span class ='listname'><a href='editbook.html?name="+element.name+"'>" + element.name + "  </a></span> <span class='listbutton'><button class='deleteContact' data-id = "+index+">DELETE</button></span></li>";
         });
     parent.innerHTML += listOfNames;
        

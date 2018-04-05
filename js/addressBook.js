@@ -51,6 +51,7 @@ parent.addEventListener('click', function(e){
         list+=   "<li class ='contact-name'><span class ='listname'><a href='editbook.html?name="+element.name+"'>" + element.name + "  </a></span> <span class='listbutton'><button class='deleteContact' data-id = "+index+">DELETE</button></span></li>";
         
        }
+       
        console.log(list);
        
     //    contactDetailss.forEach(function(element, index, array){

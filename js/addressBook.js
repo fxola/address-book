@@ -37,21 +37,30 @@ submitButton.addEventListener('click',function(e){
 });
 
 parent.addEventListener('click', function(e){
+    parent.innerHTML ="";    
     if(e.target.classList.contains('deleteContact')){
-        parent.innerHTML = "";
-        
         var contactID = e.target.getAttribute('data-id');
-        var contactDetailss = JSON.parse(localStorage.contact);
+        var contactt = localStorage.getItem('contact');
+        var contactDetailss = JSON.parse(contactt);
+        // console.log(contactDetailss);   
        var contactLeft = contactDetailss.splice(contactID,1);
-       contactLeft.forEach(function(element, index, array){
-        listOfNames = "<li class ='contact-name'><span class ='listname'><a href='editbook.html?name="+element.name+"'>" + element.name + "  </a></span> <span class='listbutton'><button class='deleteContact' data-id = "+index+">DELETE</button></span></li>";
-        });
-    parent.innerHTML += listOfNames;
+    //    console.log(contactDetailss);
+    var  list ="";
+       for (let index = 0; index < contactDetailss.length; index++) {
+           const element = contactDetailss[index];
+        list+=   "<li class ='contact-name'><span class ='listname'><a href='editbook.html?name="+element.name+"'>" + element.name + "  </a></span> <span class='listbutton'><button class='deleteContact' data-id = "+index+">DELETE</button></span></li>";
+        
+       }
+       console.log(list);
+       
+    //    contactDetailss.forEach(function(element, index, array){
+    //     listOfNames = "<li class ='contact-name'><span class ='listname'><a href='editbook.html?name="+element.name+"'>" + element.name + "  </a></span> <span class='listbutton'><button class='deleteContact' data-id = "+index+">DELETE</button></span></li>";
+    //     });
+    parent.innerHTML = list;
        
     }
 });
 
-    // console.log('hey');
 
 
   

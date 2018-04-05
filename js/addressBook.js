@@ -20,9 +20,9 @@ submitButton.addEventListener('click',function(e){
 
     addressBook.push(contact);  
 
-    sessionStorage.setItem('contact', JSON.stringify(addressBook));
+    localStorage.setItem('contact', JSON.stringify(addressBook));
 
-    var contactDetails = JSON.parse(sessionStorage.contact);
+    var contactDetails = JSON.parse(localStorage.contact);
     contactDetails.forEach(function(element, index, array){
         listOfNames = "<li class ='contact-name'><span class ='listname'><a href='editbook.html?name="+element.name+"'>" + element.name + "  </a></span> <span class='listbutton'><button class='deleteContact' data-id = "+index+">DELETE</button></span></li>";
     });
@@ -41,7 +41,7 @@ parent.addEventListener('click', function(e){
         parent.innerHTML = "";
         
         var contactID = e.target.getAttribute('data-id');
-        var contactDetailss = JSON.parse(sessionStorage.contact);
+        var contactDetailss = JSON.parse(localStorage.contact);
        var contactLeft = contactDetailss.splice(contactID,1);
        contactLeft.forEach(function(element, index, array){
         listOfNames = "<li class ='contact-name'><span class ='listname'><a href='editbook.html?name="+element.name+"'>" + element.name + "  </a></span> <span class='listbutton'><button class='deleteContact' data-id = "+index+">DELETE</button></span></li>";

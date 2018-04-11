@@ -78,10 +78,7 @@ section#main{
     background-color: rgb(220, 214, 255);
 }
 
-:any-link{
-    text-decoration: none;
-    color: black;
-}
+
 
 button{
     background: transparent;
@@ -125,6 +122,10 @@ li{
 .listname{
 padding-top :15px;
 }
+.listname>a{
+    text-decoration: none;
+    color: black;
+}
 .deleteContact{
     color: red;
     border: 1px solid red;
@@ -134,4 +135,20 @@ padding-top :15px;
     color:white;
     background: red;
     transition: 0.3s ease;  
+}
+button.cancel{
+    border: 1px solid red;
+}
+button.cancel > a{
+    color:red;
+    text-decoration: none;
+}
+button.cancel > a:hover{
+    color:white;
+    text-decoration: none;
+}
+
+button.cancel:hover{
+    background-color: red;
+    color: white;
 }

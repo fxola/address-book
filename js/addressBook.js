@@ -50,9 +50,9 @@ parent.addEventListener('click', function(e){
         var list ="";
        for (var index = 0; index < contactDetailss.length; index++) {
            var element = contactDetailss[index];
+           contactDetailss.splice(contactID,1);        
         list +=   "<li class ='contact-name'><span class ='listname'><a href='editbook.html?name="+element.name+"'>" + element.name + "  </a></span> <span class='listbutton'><button class='deleteContact' data-id = "+index+">DELETE</button></span></li>";
         localStorage.setItem('contact', JSON.stringify(contactDetailss));
-        contactDetailss.splice(contactID,1);
        }
     parent.innerHTML = list;
        

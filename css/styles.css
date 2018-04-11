@@ -85,15 +85,15 @@ section#main{
 
 button{
     background: transparent;
-    border: 1px solid rgb(11, 255, 11);
+    border: 2px solid rgb(11, 255, 11);
     padding: 10px 2em 10px 2em;
     margin-top:0.7em;
     margin-left: 0.5em;
     border-radius: 3px;
     outline:none;
-    font-weight: 100;
+    font-weight: 700;
     letter-spacing: 2px;
-    color: white;
+    color: rgb(13, 243, 71);
     
 }
 button:hover{
@@ -107,7 +107,7 @@ button:hover{
 li{
     text-decoration: none;
     list-style: none;
-    font-size:1.2em;    
+    font-size:1.2em;   
 }
 
 
@@ -118,6 +118,12 @@ li{
     margin-bottom: 1em;
     box-shadow: 3px 15px 30px 1px rgb(148, 147, 147);
     border-radius: 5px;
+    display: flex; 
+    justify-content: space-between;
+    
+}
+.listname{
+padding-top :15px;
 }
 .deleteContact{
     color: red;

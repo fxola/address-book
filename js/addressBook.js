@@ -22,7 +22,10 @@ submitButton.addEventListener('click',function(e){
 
     localStorage.setItem('contact', JSON.stringify(addressBook));
 
-    var contactDetails = JSON.parse(localStorage.contact);
+    var contactt = localStorage.getItem('contact');
+
+    var contactDetails = JSON.parse(contactt);
+
     contactDetails.forEach(function(element, index, array){
         listOfNames = "<li class ='contact-name'><span class ='listname'><a href='editbook.html?name="+element.name+"'>" + element.name + "  </a></span> <span class='listbutton'><button class='deleteContact' data-id = "+index+">DELETE</button></span></li>";
     });
@@ -37,29 +40,24 @@ submitButton.addEventListener('click',function(e){
 });
 
 parent.addEventListener('click', function(e){
-    parent.innerHTML ="";    
     if(e.target.classList.contains('deleteContact')){
+        parent.innerHTML ="";    
+ 
         var contactID = e.target.getAttribute('data-id');
         var contactt = localStorage.getItem('contact');
         var contactDetailss = JSON.parse(contactt);
-        // console.log(contactDetailss);   
-       var contactLeft = contactDetailss.splice(contactID,1);
-    //    console.log(contactDetailss);
-    var  list ="";
-       for (let index = 0; index < contactDetailss.length; index++) {
-           const element = contactDetailss[index];
-        list+=   "<li class ='contact-name'><span class ='listname'><a href='editbook.html?name="+element.name+"'>" + element.name + "  </a></span> <span class='listbutton'><button class='deleteContact' data-id = "+index+">DELETE</button></span></li>";
-        
+
+        var list ="";
+       for (var index = 0; index < contactDetailss.length; index++) {
+           var element = contactDetailss[index];
+        list +=   "<li class ='contact-name'><span class ='listname'><a href='editbook.html?name="+element.name+"'>" + element.name + "  </a></span> <span class='listbutton'><button class='deleteContact' data-id = "+index+">DELETE</button></span></li>";
+        localStorage.setItem('contact', JSON.stringify(contactDetailss));
+        contactDetailss.splice(contactID,1);
        }
-       
-       console.log(list);
-       
-    //    contactDetailss.forEach(function(element, index, array){
-    //     listOfNames = "<li class ='contact-name'><span class ='listname'><a href='editbook.html?name="+element.name+"'>" + element.name + "  </a></span> <span class='listbutton'><button class='deleteContact' data-id = "+index+">DELETE</button></span></li>";
-    //     });
     parent.innerHTML = list;
        
     }
+    
 });
 
 

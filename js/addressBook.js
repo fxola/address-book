@@ -34,6 +34,8 @@ submitButton.addEventListener('click',function(e){
 
     function clear(){
         contactName.value ='';
+        email.value ='';
+        phone.value ='';
     }
 
     clear();

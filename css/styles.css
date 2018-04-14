@@ -31,6 +31,8 @@ input{
     outline: none;
     background: transparent;
     font-size:1.2em;
+    font-family: 'Courier New', Courier, monospace;
+
     /* box-shadow: 1px 3px 15px 1px black; */
     
     /* border-bottom: 0.1px solid grey; */
@@ -125,6 +127,9 @@ padding-top :15px;
 .listname>a{
     text-decoration: none;
     color: black;
+    padding: 10px 2em 10px 2em;
+    border: 1px solid grey;
+    border-radius: 2px;
 }
 .deleteContact{
     color: red;

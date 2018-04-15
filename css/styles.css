@@ -19,9 +19,40 @@ background-color: rgba(211, 211, 211, 0.7);
 /* box-shadow: 3px 15px 30px 1px black; */
 border-radius: 5px;
 }
+
 label{
     font-size:1.5em;    
 }
+
+section#main{
+    display: flex;
+}
+
+section#form-content{
+    padding: 1em;
+    /* background-color: #f2f4f5; */
+    background: linear-gradient(270deg, rgb(65, 37, 245) 0%, rgb(105, 178, 255) 100%);
+    text-align: left;    
+    text-justify: inter-cluster;
+    width: 40%;
+    box-shadow: 3px 15px 30px 1px ;
+    border-radius: 4px;
+    font-weight: 100;
+    
+}
+
+section#form-output{
+    margin-left: 10px;
+    background-color: #f2f4f5;
+    width :60%;
+    color: black;
+    text-align: left;    
+    padding: 10px;    
+    box-shadow: 3px 15px 30px 1px black;
+    border-radius: 4px;
+    
+}
+
 input{
     padding: 3px;
     margin : 10px;
@@ -37,19 +68,6 @@ input{
     
     /* border-bottom: 0.1px solid grey; */
 }
-section#form-content{
-    padding: 1em;
-    /* background-color: #f2f4f5; */
-    background: linear-gradient(270deg, rgb(65, 37, 245) 0%, rgb(105, 178, 255) 100%);
-    text-align: left;    
-    text-justify: inter-cluster;
-    width: 40%;
-    box-shadow: 3px 15px 30px 1px ;
-    border-radius: 4px;
-    font-weight: 100;
-    
-}
-
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     color: rgb(101, 113, 126);
 
@@ -63,20 +81,7 @@ section#form-content{
   :-moz-placeholder { /* Firefox 18- */
     color: rgb(105, 178, 255);
   }
-section#form-output{
-    margin-left: 10px;
-    background-color: #f2f4f5;
-    width :60%;
-    color: black;
-    text-align: left;    
-    padding: 10px;    
-    box-shadow: 3px 15px 30px 1px black;
-    border-radius: 4px;
-    
-}
-section#main{
-    display: flex;
-}
+
 .editbody{
     background-color: rgb(220, 214, 255);
 }
@@ -96,6 +101,7 @@ button{
     color: rgb(13, 243, 71);
     
 }
+
 button:hover{
     color: white;
     background: rgb(11, 255, 11);
@@ -104,6 +110,7 @@ button:hover{
     cursor: pointer;   
     /* border: none; */
 }
+
 li{
     text-decoration: none;
     list-style: none;
@@ -122,9 +129,11 @@ li{
     justify-content: space-between;
     
 }
+
 .listname{
 padding-top :15px;
 }
+
 .listname>a{
     text-decoration: none;
     color: black;
@@ -132,23 +141,28 @@ padding-top :15px;
     border: 1px solid grey;
     border-radius: 2px;
 }
+
 .deleteContact{
     color: red;
     border: 1px solid red;
     text-align: right;
 }
+
 .deleteContact:hover{
     color:white;
     background: red;
     transition: 0.3s ease;  
 }
+
 button.cancel{
     border: 1px solid red;
 }
+
 button.cancel > a{
     color:red;
     text-decoration: none;
 }
+
 button.cancel > a:hover{
     color:white;
     text-decoration: none;
@@ -158,36 +172,37 @@ button.cancel:hover{
     background-color: red;
     color: white;
 }
+
 @media only screen 
   and (min-device-width: 320px) 
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2) {
-    section#main{
-        display: block;
-    }
-    section#form-content{
-       width : 100%;
-    }
-    section#form-output{
-        width : 100%;
-        margin-left : 0px;
-        margin-top : 2em;
-     }
-  .contact-name{
-      display: block;
-  }
+        section#main{
+            display: block;
+        }
+        section#form-content{
+            width : 100%;
+        }
+        section#form-output{
+            width : 100%;
+            margin-left : 0px;
+            margin-top : 2em;
+            }
+        .contact-name{
+            display: block;
+        }
 
- span.listname{
-     margin: 10px auto;
-     font-size: 12px;
-     display: block;
+        span.listname{
+            margin: 10px auto;
+            font-size: 12px;
+            display: block;
 
- }
+        }
 
- button.deleteContact{
-    margin: 10px auto;
-    font-size: 10px;
+        button.deleteContact{
+        margin: 10px auto;
+        font-size: 10px;
 
 
-}
+        }
 }

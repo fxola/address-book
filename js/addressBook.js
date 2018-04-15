@@ -43,7 +43,7 @@ submitButton.addEventListener('click',function(e){
 
 parent.addEventListener('click', function(e){
     if(e.target.classList.contains('deleteContact')){
-        parent.innerHTML ="";    
+        parent.innerHTML = "";    
  
         var contactID = e.target.getAttribute('data-id');
         var contactt = localStorage.getItem('contact');

@@ -49,6 +49,7 @@ section#form-content{
     font-weight: 100;
     
 }
+
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     color: rgb(101, 113, 126);
 

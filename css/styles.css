@@ -177,13 +177,16 @@ button.cancel:hover{
   }
 
  span.listname{
-     margin: 1em 0 1em 0;
+     margin: 10px auto;
      font-size: 12px;
+     display: block;
+
  }
 
  button.deleteContact{
-    margin: 1em 0 1em 0;
+    margin: 10px auto;
     font-size: 10px;
+
 
 }
 }

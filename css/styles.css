@@ -175,7 +175,7 @@ button.cancel:hover{
 
 @media only screen 
   and (min-width: 320px) 
-  and (max-width: 480px)
+  and (max-width: 640px)
 {
         section#main{
             display: block;
@@ -196,13 +196,24 @@ button.cancel:hover{
             margin: 10px auto;
             font-size: 12px;
             display: block;
+            width:100%;
+        }
 
+        .listname > a{
+            padding-top :10px;
+            padding-bottom: 10px;
+            margin: 10px auto;            
+            display: block;            
+            width: 100%;
+            text-align: center;
+            
         }
 
         button.deleteContact{
-        margin: 10px auto;
-        font-size: 10px;
-
+            margin: 10px auto;
+            font-size: 10px;
+            width:100%;
+            text-align: center;
 
         }
 }

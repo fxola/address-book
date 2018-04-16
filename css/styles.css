@@ -193,19 +193,23 @@ button.cancel:hover{
         }
 
         span.listname{
+            padding: 0;
             margin: 10px auto;
             font-size: 12px;
             display: block;
             width:100%;
+            border: 1px solid grey;
+            border-radius: 4px;
+            text-align: center;
+            
         }
 
         .listname > a{
-            padding-top :10px;
-            padding-bottom: 10px;
             margin: 10px auto;            
             display: block;            
-            width: 100%;
             text-align: center;
+            border:none;
+            padding: 0;
             
         }
 
